@@ -19,5 +19,15 @@
     checkWidth(maxWidth);
     maxWidth.addListener(checkWidth);
 
+    $(".q-view").click(function (e) {
+      if (e.target == $("#close-btn")[0] || e.target == $(".q-view")[0]) {
+        $(".q-view").addClass("visually-hidden");
+      }
+    });
+
+    $(".arrivals-item--hover").click(function (e){
+      $(".q-view").removeClass("visually-hidden");
+    });
+
   })
 })(jQuery)

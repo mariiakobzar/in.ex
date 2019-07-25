@@ -238,6 +238,40 @@
       </div>
 
       <a href="#" class="btn">Shop All</a>
+
+      <div class="q-view visually-hidden">
+        <div class="q-view-card">
+          <button id="close-btn"></button>
+          <div class="q-view-card-image">
+            <div class="q-view-card__img">
+              <img src="img/staff.jpg" alt="Photo">
+            </div>
+          </div>
+          <div class="q-view-card-info">
+            <h3 class="q-view-card-info__title">Seamless Bra</h3>
+            <p class="q-view-card-info__id">SKU: 0004</p>
+            <p>
+              <span class="q-view-card-info__price">$25.00</span>
+              <span><a href="#" class="q-view-card-info__link">View Full Details</a></span>
+            </p>
+            <label for="select-size">Size</label>
+            <div id="select">
+              <select name="size" id="select-size">
+                <option value="s">Small</option>
+                <option value="l">Large</option>
+              </select>
+            </div>
+            <label for="input-quantity">Quantity</label>
+            <span id="input-number">
+              <input type="number" value="1" id="input-quantity" min="1">
+              <span onclick="this.previousElementSibling.stepUp()"></span>
+              <span onclick="this.previousElementSibling.previousElementSibling.stepDown()"></span>
+            </span>
+            <input type="button" id="add-btn" value="Add To Card">
+          </div>
+
+        </div>
+      </div>
     </section>
   </main>
 
