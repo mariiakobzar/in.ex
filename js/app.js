@@ -25,7 +25,7 @@
       }
     });
 
-    $(".arrivals-item--hover").click(function (e) {
+    $(".item--hover").click(function (e) {
       $(".q-view").removeClass("visually-hidden");
     });
 

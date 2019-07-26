@@ -1,5 +1,5 @@
 .container {
-  max-width: 1170px;
+  max-width: 1250px;
   height: 100%;
   margin: 0 auto;
 }
@@ -177,5 +177,319 @@ ul li {
   height: 30px;
   width: 30px;
   margin-right: 5px;
+}
+
+.item {
+  width: 23%;
+  margin: 0 1%;
+  margin-bottom: 25px;
+}
+
+.item__image {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%;
+  margin-bottom: 25px;
+}
+
+.item__image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.item--hover {
+  -webkit-transition: 0.5s ease-in;
+  transition: 0.5s ease-in;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 15px 0;
+  color: #999997;
+  background-color: rgba(255, 255, 255, 0.8);
+  text-transform: uppercase;
+  -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+          clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+}
+
+.item--new {
+  font-size: 1rem;
+  position: absolute;
+  padding: 5px 10px;
+  background-color: #ea5823;
+  color: white;
+}
+
+.item-info {
+  text-align: center;
+}
+
+.item-info__name {
+  font-weight: normal;
+  font-size: 18px;
+  color: #ea5823;
+  margin-bottom: 15px;
+}
+
+.item-info__price {
+  font-size: 0.875rem;
+  color: #999997;
+}
+
+.item:hover .item--hover {
+  -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+          clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+}
+
+.q-view {
+  position: fixed;
+  bottom: 0;
+  z-index: 5;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.q-view-card {
+  padding: 50px;
+  height: 65%;
+  width: 60%;
+  background: #e8e6e6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.q-view-card #close-btn {
+  border: none;
+  display: inline-block;
+  background-color: transparent;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 25px;
+  height: 25px;
+  opacity: 0.3;
+  -webkit-transition: 0s;
+  transition: 0s;
+}
+
+.q-view-card #close-btn:hover {
+  opacity: 1;
+}
+
+.q-view-card #close-btn:before, .q-view-card #close-btn:after {
+  position: absolute;
+  left: 15px;
+  top: 0;
+  content: ' ';
+  height: 25px;
+  width: 2px;
+  background-color: #575757;
+}
+
+.q-view-card #close-btn:before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.q-view-card #close-btn:after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.q-view-card-image {
+  width: 50%;
+  margin-right: 25px;
+}
+
+.q-view-card__img {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%;
+  margin-bottom: 25px;
+}
+
+.q-view-card__img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.q-view-card-info {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.q-view-card-info__title {
+  font-size: 40px;
+  color: #ea5823;
+  font-family: "NeuzeitGrotesk", sans-serif;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.q-view-card-info__id {
+  opacity: .6;
+  margin-bottom: 30px;
+}
+
+.q-view-card-info__price {
+  font-size: 22px;
+  color: #575757;
+  margin-right: 10px;
+}
+
+.q-view-card-info__link {
+  color: #adabab;
+  font-size: 14px;
+  border-bottom: 0.5px solid #adabab;
+  -webkit-transition: 0s;
+  transition: 0s;
+}
+
+.q-view-card-info__link:hover {
+  color: #575757;
+}
+
+.q-view-card-info label {
+  font-size: 18px;
+  opacity: .6;
+  padding-top: 30px;
+  margin-bottom: 10px;
+}
+
+.q-view-card-info input {
+  font-size: 18px;
+  color: #adabab;
+  height: 50px;
+  width: 100%;
+  border: 1px solid #adabab;
+  padding: 0 15px;
+}
+
+.q-view-card-info #select {
+  position: relative;
+  width: 100%;
+}
+
+.q-view-card-info #select select {
+  font-size: 18px;
+  color: #adabab;
+  padding-right: 40px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  height: 50px;
+  width: 100%;
+  padding: 0 15px;
+}
+
+.q-view-card-info #select select option {
+  color: #575757;
+  border-color: #575757;
+}
+
+.q-view-card-info #select select:hover {
+  border-color: #575757;
+}
+
+.q-view-card-info #select:after {
+  cursor: pointer;
+  content: " ";
+  z-index: 1;
+  position: absolute;
+  right: 15px;
+  top: 35%;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-right: 1px solid #adabab;
+  border-top: 1px solid #adabab;
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+.q-view-card-info #input-number {
+  position: relative;
+  display: inline-block;
+}
+
+.q-view-card-info #input-number input::-webkit-inner-spin-button {
+  display: none;
+}
+
+.q-view-card-info #input-number input:hover {
+  border-color: #575757;
+}
+
+.q-view-card-info #input-number span {
+  position: absolute;
+  right: 15px;
+  width: 10px;
+  height: 10px;
+  border-right: 1px solid #adabab;
+  border-top: 1px solid #adabab;
+  cursor: pointer;
+}
+
+.q-view-card-info #input-number span:nth-of-type(1) {
+  top: 12px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.q-view-card-info #input-number span:nth-of-type(2) {
+  bottom: 12px;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+
+.q-view-card-info #input-number span:hover {
+  border-color: #575757;
+}
+
+.q-view-card-info #add-btn {
+  background-color: #ea5823;
+  color: white;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 30px;
+}
+
+.q-view-card-info #add-btn:hover {
+  opacity: 0.8;
 }
 /*# sourceMappingURL=main.css.map */
