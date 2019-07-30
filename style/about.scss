@@ -1,0 +1,79 @@
+@import "main.scss";
+
+.hero {
+  padding-top: 100px;
+  display: flex;
+  height: 400px;
+
+  &-left {
+    width: 40%;
+    background-color: $mainColor;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__title {
+      display: inline-block;
+      font-family: $titleFont;
+      font-weight: 400;
+      font-size: 5.125rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: white;
+      border: 3px solid white;
+      padding: 10px 30px;
+    }
+  }
+
+  &-right {
+    width: 60%;
+
+    img {
+      height: 300px;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+}
+
+.about {
+  padding-top: 50px;
+  background-image: url(../img/bg-lines.png);
+  background-size: cover;
+  &__title{
+    font-weight: 400;
+    width: 50%;
+    font-family: "NeuzeitGrotesk", sans-serif;
+    color: #ea5823;
+    font-size: 2.5rem;
+    padding: 30px;
+    border: 3px solid #ea5823;
+    svg {
+      fill: #ea5823;
+      height: 35px;
+      width: 35px;
+      margin-right: 5px;
+    }
+  }
+
+  &-info{
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    &__text{
+      width: 350px;
+      padding-left: 35px;
+      margin-right: 50px;
+      p{
+        padding-top: 40px;
+      }
+    }
+    &__image{
+      width: 350px;
+      height: 500px;
+      padding-top: 40px;
+    }
+  }
+
+}

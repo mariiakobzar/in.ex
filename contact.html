@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, ifnitial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>IN.EX</title>
+  <script defer src="js/all.min.js"></script>
+  <link rel="stylesheet" href="style/normalize.css">
+  <link rel="stylesheet" href="style/fonts.css">
+  <link rel="stylesheet" href="style/contact.css">
+</head>
+
+<body>
+  <header class="header">
+
+    <a href="#" class="logo">IN.EX</a>
+    <nav>
+      <ul class="menu">
+        <li class="menu__item">
+          <a href="./index.html">Home</a>
+        </li>
+        <li class="menu__item">
+          <a href="./shop.html">Shop</a>
+        </li>
+        <li class="menu__item">
+          <a href="./about.html">About</a>
+        </li>
+        <li class="menu__item">
+          <a href="./forum.html">Forum</a>
+        </li>
+        <li class="menu__item active">
+          <a href="./contact.html">Contact</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="basket">
+      <button class="basket-content">
+        <svg>
+          <use xlink:href="#svg-basket"></use>
+        </svg>
+        <span class="basket__count">0</span>
+      </button>
+      <button class="burger visually-hidden">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <div class="burger-menu visually-hidden">
+      <ul>
+        <li class="burger-menu__item burger-menu__item--active">
+          <a href="./index.html">Home</a>
+        </li>
+        <li class="burger-menu__item">
+          <a href="./shop.html">Shop</a>
+        </li>
+        <li class="burger-menu__item">
+          <a href="./about.html">About</a>
+        </li>
+        <li class="burger-menu__item">
+          <a href="./forum.html">Forum</a>
+        </li>
+        <li class="burger-menu__item">
+          <a href="./contact.html">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="contact">
+      <div class="container">
+        <h2 class="contact__title">
+          <svg>
+            <use xlink:href="#svg-arrow"></use>
+          </svg>
+          EXHALE WITH US
+        </h2>
+
+        <div class="contact-info">
+          <div class="contact-info__image">
+            <img src="img/contact.jpg" alt="">
+          </div>
+          <div class="contact-info-text">
+            <div class="contact-info-text__main">
+              <h3>VISIT OUR STORE</h3>
+              <p>Address: 500 Terry Francois Street</p>
+              <p>San Francisco, CA 94158</p>
+              <p>Phone: 123-456-7890</p>
+              <p>Email: info@my-domain.com</p>
+            </div>
+            <div class="contact-info-text-stockists">
+              <div class="contact-info-text-stockists__item">
+                <p>Store 1</p>
+                <p>500 Terry Francois Street</p>
+                <p>San Francisco, CA 94158</p>
+                <p>Tel: 123-456-7890</p>
+              </div>
+              <div class="contact-info-text-stockists__item">
+                <p>Store 2</p>
+                <p>500 Terry Francois Street</p>
+                <p>San Francisco, CA 94158</p>
+                <p>Tel: 123-456-7890</p>
+              </div>
+              <div class="contact-info-text-stockists__item">
+                <p>Store 3</p>
+                <p>500 Terry Francois Street</p>
+                <p>San Francisco, CA 94158</p>
+                <p>Tel: 123-456-7890</p>
+              </div>
+              <div class="contact-info-text-stockists__item">
+                <p>Store 4</p>
+                <p>500 Terry Francois Street</p>
+                <p>San Francisco, CA 94158</p>
+                <p>Tel: 123-456-7890</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-card">
+      <form class="contact-card-form">
+        <div class="contact-card-form__contacts">
+          <input type="text" placeholder="Name">
+          <input type="email" placeholder="Email">
+        </div>
+        <input type="text" placeholder="Subject">
+        <textarea rows="3" placeholder="Message"></textarea>
+        <input type="submit" value="Submite">
+      </form>
+      <div id="contact-card-map">
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+
+      <div class="list">
+        <a href="#" class="list__title">IN.EX</a>
+        <ul>
+          <li class="list__item">
+            <a href="#">Home</a>
+          </li>
+          <li class="list__item">
+            <a href="#">Shop</a>
+          </li>
+          <li class="list__item">
+            <a href="#">contact</a>
+          </li>
+          <li class="list__item">
+            <a href="#">Forum</a>
+          </li>
+          <li class="list__item">
+            <a href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="list">
+        <a href="#" class="list__title">Experience</a>
+        <ul>
+          <li class="list__item">
+            <a href="#">FAQ</a>
+          </li>
+          <li class="list__item">
+            <a href="#">Shipping & Returns</a>
+          </li>
+          <li class="list__item">
+            <a href="#">Store Policy</a>
+          </li>
+          <li class="list__item">
+            <a href="#">Payment Methods</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="list">
+        <a href="#" class="list__title">Follow Us</a>
+        <ul>
+          <li class="list__item">
+            <a href="#">Facebook</a>
+          </li>
+          <li class="list__item">
+            <a href="#">Twitter</a>
+          </li>
+          <li class="list__item">
+            <a href="#">Instagram</a>
+          </li>
+          <li class="list__item">
+            <a href="#">Pinterest</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="list">
+        <a href="#" class="list__title">Join our Newsletter</a>
+        <form>
+          <input type="email" placeholder="Enter your email here*">
+          <input type="submit" value="Subscribe Now">
+        </form>
+      </div>
+
+    </div>
+  </footer>
+
+  <div class="copyright">
+    <div class="container">
+      <p>© 2023 by IN.EX. Proudly created with Wix</p>
+    </div>
+  </div>
+
+  <div class="visually-hidden">
+    <svg width="0" height="0" style="position:absolute">
+
+      <symbol id="svg-basket" viewBox="221.4 359.3 267 123" width="170%" height="100%">
+        <rect x="221.4" y="403.7" width="152.4" height="6"></rect>
+        <path
+          d="M345.9 482.3h-96.4c-1.2 0-2.4-1.2-3-2.4l-19.6-70.8 6-1.8 19.1 68.5h92.3l19-68.5 6 1.8 -19.6 70.8C348.2 481.1 347 482.3 345.9 482.3z">
+        </path>
+        <rect x="259" y="380.1" transform="matrix(-0.527 -0.8498 0.8498 -0.527 109.9867 827.3946)" width="52.4"
+          height="6"></rect>
+        <rect x="292.3" y="424.5" width="10.7" height="10.7"></rect>
+        <rect x="315.5" y="424.5" width="10.7" height="10.7"></rect>
+        <rect x="269.1" y="424.5" width="10.7" height="10.7"></rect>
+        <rect x="292.3" y="447.7" width="10.7" height="10.7"></rect>
+        <rect x="315.5" y="447.7" width="10.7" height="10.7"></rect>
+        <rect x="269.1" y="447.7" width="10.7" height="10.7"></rect>
+      </symbol>
+
+      <svg id="svg-arrow" viewBox="0 0 31.49 31.49">
+        <path d="M21.205,5.007c-0.429-0.444-1.143-0.444-1.587,0c-0.429,0.429-0.429,1.143,0,1.571l8.047,8.047H1.111
+	C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587
+	c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z" />
+      </svg>
+
+    </svg>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+
+</html>

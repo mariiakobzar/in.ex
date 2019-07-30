@@ -1,10 +1,12 @@
 $mainColor: #ea5823;
 $mainBackground: #1f1f1f;
-$titleFont: 'NeuzeitGrotesk',
-sans-serif;
+$titleFont: 'NeuzeitGrotesk', sans-serif;
 $container: 1250px;
 $colGups: 15px;
 $textFont-size: 1rem;
+
+@import "slick.scss";
+@import "slick-theme.scss";
 
 $breakpoints: (xs: 0, sm: 575px, md: 768px, lg: 1025px, xl: 1200px, xxl: 1440px);
 
@@ -81,6 +83,10 @@ ul li {
     font-size: 0.875rem;
     margin-right: 3.5714em;
     letter-spacing: 3px;
+
+    &.active {
+      color: $mainColor;
+    }
 
     &:hover {
       color: $mainColor;
@@ -427,3 +433,78 @@ ul li {
   }
 }
 
+.footer {
+  background-color: $mainBackground;
+  padding: 80px 0;
+
+  .container {
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .list {
+    &__title {
+      text-transform: uppercase;
+      display: inline-block;
+      color: $mainColor;
+      font-family: "NeuzeitGrotesk", sans-serif;
+      font-weight: 400;
+      font-size: 1.875rem;
+      margin-bottom: 1em;
+    }
+
+    &__item {
+      color: #999997;
+      font-size: 1rem;
+      margin-bottom: 0.7em;
+
+      &:hover {
+        color: $mainColor;
+      }
+    }
+
+    form {
+      width: 100%;
+    }
+
+    input[type="email"] {
+      display: block;
+      width: 100%;
+      border: 1px solid transparent;
+      border-bottom: 1px solid #999997;
+      background-color: transparent;
+      padding: 10px;
+      color: #999997;
+      margin-bottom: 30px;
+      transition: .3s ease-in;
+
+      &:hover {
+        border: 1px solid #999997;
+      }
+    }
+
+    input[type="submit"] {
+      border: 1px solid transparent;
+      background-color: $mainColor;
+      padding: 7px 30px;
+      width: 100%;
+      color: white;
+
+      &:hover {
+        border-color: $mainColor;
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+.copyright {
+  .container {
+    width: 1000px;
+  }
+
+  background-color: $mainColor;
+  padding: 20px;
+  font-size: 0.875rem;
+}

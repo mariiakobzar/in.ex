@@ -846,4 +846,236 @@ ul li {
 .copyright .container {
   width: 1000px;
 }
-/*# sourceMappingURL=main.css.map */
+
+main {
+  background-image: url("../img/bg-lines.png");
+  background-size: cover;
+}
+
+.container {
+  width: 960px;
+}
+
+.search {
+  padding-top: 150px;
+  margin-bottom: 50px;
+}
+
+.search .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.search h5 {
+  font-weight: normal;
+  font-size: 14px;
+}
+
+.search-input {
+  display: inline-block;
+  border: 0.5px solid transparent;
+  border-bottom-color: #1F1F1F;
+  padding: 10px 0;
+  margin-right: 20px;
+}
+
+.search-input svg {
+  margin-right: 10px;
+}
+
+.search input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  position: relative;
+}
+
+.search a {
+  color: #ea5823;
+  border: 1px solid #ea5823;
+  padding: 10px 20px;
+}
+
+.forum__title {
+  text-align: center;
+  font-weight: 400;
+  font-family: "NeuzeitGrotesk", sans-serif;
+  color: #1F1F1F;
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+.forum__text {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 50px;
+}
+
+.forum-articles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.article {
+  width: 460px;
+  margin: 1%;
+}
+
+.article__image {
+  height: 250px;
+  width: 460px;
+}
+
+.article__image img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.article-info {
+  width: 100%;
+  padding: 20px 40px;
+  border: 1px solid lightgray;
+  border-top: none;
+}
+
+.article-info h3 {
+  font-weight: 400;
+  font-family: "NeuzeitGrotesk", sans-serif;
+  color: #1F1F1F;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.article-info__count {
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+.article-info__count span:first-child {
+  position: relative;
+  margin-right: 10px;
+}
+
+.article-info__count span:first-child::after {
+  content: "|";
+  position: absolute;
+  margin: 0 5px;
+}
+
+.article-info p {
+  font-size: 14px;
+}
+
+.new-posts {
+  margin-bottom: 50px;
+}
+
+.new-posts-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.new-posts h4 {
+  padding-left: 10px;
+  font-size: 16px;
+  font-family: "NeuzeitGrotesk", sans-serif;
+  color: #1F1F1F;
+  margin-bottom: 20px;
+  font-weight: normal;
+}
+
+.post {
+  border: 1px solid lightgray;
+  width: 300px;
+  padding: 20px;
+  margin: 1%;
+}
+
+.post-info {
+  font-size: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+}
+
+.post-info__image {
+  height: 30px;
+  width: 30px;
+  border-radius: 100%;
+  margin-right: 10px;
+}
+
+.post-info__image img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.post-info-name__info span:first-child {
+  position: relative;
+  margin-right: 10px;
+}
+
+.post-info-name__info span:first-child::after {
+  content: "·";
+  position: absolute;
+  margin: 0 5px;
+}
+
+.post-main h5 {
+  font-size: 18px;
+  font-family: "NeuzeitGrotesk", sans-serif;
+  color: #1F1F1F;
+  margin-bottom: 10px;
+  font-weight: normal;
+}
+
+.post-main p {
+  font-size: 14px;
+  border-bottom: 1px solid lightgray;
+  padding-bottom: 40px;
+}
+
+.post-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 12px;
+  padding-top: 20px;
+}
+
+.post-footer svg {
+  fill: #ea5823;
+}
+/*# sourceMappingURL=forum.css.map */
