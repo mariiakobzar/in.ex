@@ -98,9 +98,9 @@
     background-color: white;
     position: absolute;
     bottom: 0;
-    // height: 25%;
     width: 75%;
     padding: 30px 20px 30px 20px;
+    transition: 1s ease-in;
 
 
     &-content {
@@ -130,6 +130,11 @@
       background-position: 100% 0;
       background-size: 200% 100%;
       transition: 0.5s ease-in;
+      clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+
+      &.active {
+        clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+      }
 
       &:hover {
         background-position: 0 0;
@@ -192,7 +197,13 @@
   justify-content: center;
 
   &-info {
+    clip-path: polygon(0 100%, 0 100%, 0 0, 0 0);
+    transition: 0.5s ease-in;
     margin-right: 5%;
+
+    &.active {
+      clip-path: polygon(100% 100%, 0 100%, 0 0, 100% 0);
+    }
 
     &__title {
       color: white;
@@ -230,6 +241,12 @@
     width: 380px;
     padding: 20px;
     background-color: rgb(232, 230, 230);
+    transition: 1s ease-in;
+    clip-path: polygon(100% 0, 0 0, 0 0, 100% 0);
+
+    &.active {
+      clip-path: polygon(100% 100%, 0 100%, 0 0, 100% 0);
+    }
 
     img {
       width: 100%;
@@ -262,7 +279,7 @@
       $mainColor);
   background-position: 100% 0;
   background-size: 200% 100%;
-  transition: 0.5s ease-in;
+  transition: 1s ease-in;
 
   &:hover {
     background-position: 0 0;

@@ -1,6 +1,7 @@
 $mainColor: #ea5823;
 $mainBackground: #1f1f1f;
-$titleFont: 'NeuzeitGrotesk', sans-serif;
+$titleFont: 'NeuzeitGrotesk',
+sans-serif;
 $container: 1250px;
 $colGups: 15px;
 $textFont-size: 1rem;
@@ -206,6 +207,41 @@ ul li {
 
   &:hover .item--hover {
     clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+  }
+}
+
+.cart {
+  position: fixed;
+  bottom: 0;
+  z-index: 5;
+  background-color: rgba($color: #000000, $alpha: .6);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: flex-end;
+  &-card{
+    background-color: $mainBackground;
+    width: 350px;
+    &__head{
+      font-size: 24px;
+      background-color: $mainColor;
+      font-family: $titleFont;
+      padding: 30px 20px;
+      button{
+        border: none;
+        background-color: transparent;
+        margin-right: 38%;
+        svg{
+          fill:white;
+          width: 11px !important;;
+        }
+      }
+    }
+    p{
+      text-align: center;
+      padding-top: 15%;
+      font-size: 18px;
+    }
   }
 }
 
