@@ -553,14 +553,18 @@ ul li {
 .cart-card__head button {
   border: none;
   background-color: transparent;
+  margin-right: 38%;
 }
 
 .cart-card__head button svg {
   fill: white;
+  width: 11px !important;
 }
 
-.cart-card__head span {
+.cart-card p {
   text-align: center;
+  padding-top: 15%;
+  font-size: 18px;
 }
 
 .q-view {

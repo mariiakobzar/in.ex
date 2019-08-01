@@ -539,7 +539,11 @@ ul li {
 }
 
 .cart-card {
+  -webkit-clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+          clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
   background-color: #1f1f1f;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   width: 350px;
 }
 
@@ -554,6 +558,8 @@ ul li {
   border: none;
   background-color: transparent;
   margin-right: 38%;
+  -webkit-transition: .5s ease-in;
+  transition: .5s ease-in;
 }
 
 .cart-card__head button svg {
@@ -561,10 +567,20 @@ ul li {
   width: 11px !important;
 }
 
+.cart-card__head button.active {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
 .cart-card p {
   text-align: center;
   padding-top: 15%;
   font-size: 18px;
+}
+
+.cart-card.active {
+  -webkit-clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+          clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
 }
 
 .q-view {
@@ -587,7 +603,6 @@ ul li {
 
 .q-view-card {
   padding: 50px;
-  height: 65%;
   width: 60%;
   background: #e8e6e6;
   display: -webkit-box;
@@ -718,12 +733,12 @@ ul li {
   padding: 0 15px;
 }
 
-.q-view-card-info #select {
+#select {
   position: relative;
   width: 100%;
 }
 
-.q-view-card-info #select select {
+#select select {
   font-size: 18px;
   color: #adabab;
   padding-right: 40px;
@@ -735,16 +750,16 @@ ul li {
   padding: 0 15px;
 }
 
-.q-view-card-info #select select option {
+#select select option {
   color: #575757;
   border-color: #575757;
 }
 
-.q-view-card-info #select select:hover {
+#select select:hover {
   border-color: #575757;
 }
 
-.q-view-card-info #select:after {
+#select:after {
   cursor: pointer;
   content: " ";
   z-index: 1;
@@ -760,20 +775,20 @@ ul li {
   transform: rotate(135deg);
 }
 
-.q-view-card-info #input-number {
+#input-number {
   position: relative;
   display: inline-block;
 }
 
-.q-view-card-info #input-number input::-webkit-inner-spin-button {
+#input-number input::-webkit-inner-spin-button {
   display: none;
 }
 
-.q-view-card-info #input-number input:hover {
+#input-number input:hover {
   border-color: #575757;
 }
 
-.q-view-card-info #input-number span {
+#input-number span {
   position: absolute;
   right: 15px;
   width: 10px;
@@ -783,23 +798,23 @@ ul li {
   cursor: pointer;
 }
 
-.q-view-card-info #input-number span:nth-of-type(1) {
+#input-number span:nth-of-type(1) {
   top: 12px;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
 
-.q-view-card-info #input-number span:nth-of-type(2) {
+#input-number span:nth-of-type(2) {
   bottom: 12px;
   -webkit-transform: rotate(135deg);
           transform: rotate(135deg);
 }
 
-.q-view-card-info #input-number span:hover {
+#input-number span:hover {
   border-color: #575757;
 }
 
-.q-view-card-info #add-btn {
+#add-btn {
   background-color: #ea5823;
   color: white;
   border: none;
@@ -808,7 +823,7 @@ ul li {
   margin-top: 30px;
 }
 
-.q-view-card-info #add-btn:hover {
+#add-btn:hover {
   opacity: 0.8;
 }
 

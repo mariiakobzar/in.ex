@@ -539,7 +539,11 @@ ul li {
 }
 
 .cart-card {
+  -webkit-clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+          clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
   background-color: #1f1f1f;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   width: 350px;
 }
 
@@ -554,6 +558,8 @@ ul li {
   border: none;
   background-color: transparent;
   margin-right: 38%;
+  -webkit-transition: .5s ease-in;
+  transition: .5s ease-in;
 }
 
 .cart-card__head button svg {
@@ -561,10 +567,20 @@ ul li {
   width: 11px !important;
 }
 
+.cart-card__head button.active {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
 .cart-card p {
   text-align: center;
   padding-top: 15%;
   font-size: 18px;
+}
+
+.cart-card.active {
+  -webkit-clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+          clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
 }
 
 .q-view {
