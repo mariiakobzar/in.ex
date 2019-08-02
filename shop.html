@@ -8,6 +8,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>IN.EX</title>
   <script defer src="js/all.min.js"></script>
+  <script src="js/handlebars-v4.1.2.js"></script>
   <link rel="stylesheet" href="style/normalize.css">
   <link rel="stylesheet" href="style/fonts.css">
   <link rel="stylesheet" href="style/shop.css">
@@ -192,153 +193,33 @@
 
         </div>
 
-        <div class="shop-container">
-
-          <div class="item">
-            <div class="item__image">
-              <img src="img/staff.jpg" alt="">
-              <div class="item--new">
-                <p>New Arrival</p>
-              </div>
-              <a class="item--hover">
-                <p>Quick View</p>
-              </a>
-            </div>
-            <div class="item-info">
-              <h4 class="item-info__name">Printed Leggings</h4>
-              <p class="item-info__price">$35.00</p>
-            </div>
-          </div>
-
-          <div class="item">
-            <div class="item__image">
-              <img src="img/staff.jpg" alt="">
-              <div class="item--new">
-                <p>New Arrival</p>
-              </div>
-              <a class="item--hover">
-                <p>Quick View</p>
-              </a>
-            </div>
-            <div class="item-info">
-              <h4 class="item-info__name">Printed Leggings</h4>
-              <p class="item-info__price">$35.00</p>
-            </div>
-          </div>
-
-          <div class="item">
-            <div class="item__image">
-              <img src="img/staff.jpg" alt="">
-              <div class="item--new">
-                <p>New Arrival</p>
-              </div>
-              <a class="item--hover">
-                <p>Quick View</p>
-              </a>
-            </div>
-            <div class="item-info">
-              <h4 class="item-info__name">Printed Leggings</h4>
-              <p class="item-info__price">$35.00</p>
-            </div>
-          </div>
-
-          <div class="item">
-            <div class="item__image">
-              <img src="img/staff.jpg" alt="">
-              <div class="item--new">
-                <p>New Arrival</p>
-              </div>
-              <a class="item--hover">
-                <p>Quick View</p>
-              </a>
-            </div>
-            <div class="item-info">
-              <h4 class="item-info__name">Printed Leggings</h4>
-              <p class="item-info__price">$35.00</p>
-            </div>
-          </div>
-
-          <div class="item">
-            <div class="item__image">
-              <img src="img/staff.jpg" alt="">
-              <div class="item--new">
-                <p>New Arrival</p>
-              </div>
-              <a class="item--hover">
-                <p>Quick View</p>
-              </a>
-            </div>
-            <div class="item-info">
-              <h4 class="item-info__name">Printed Leggings</h4>
-              <p class="item-info__price">$35.00</p>
-            </div>
-          </div>
-
-          <div class="item">
-            <div class="item__image">
-              <img src="img/staff.jpg" alt="">
-              <div class="item--new">
-                <p>New Arrival</p>
-              </div>
-              <a class="item--hover">
-                <p>Quick View</p>
-              </a>
-            </div>
-            <div class="item-info">
-              <h4 class="item-info__name">Printed Leggings</h4>
-              <p class="item-info__price">$35.00</p>
-            </div>
-          </div>
-
-          <div class="item">
-            <div class="item__image">
-              <img src="img/staff.jpg" alt="">
-              <div class="item--new">
-                <p>New Arrival</p>
-              </div>
-              <a class="item--hover">
-                <p>Quick View</p>
-              </a>
-            </div>
-            <div class="item-info">
-              <h4 class="item-info__name">Printed Leggings</h4>
-              <p class="item-info__price">$35.00</p>
-            </div>
-          </div>
-
-          <div class="item">
-            <div class="item__image">
-              <img src="img/staff.jpg" alt="">
-              <div class="item--new">
-                <p>New Arrival</p>
-              </div>
-              <a class="item--hover">
-                <p>Quick View</p>
-              </a>
-            </div>
-            <div class="item-info">
-              <h4 class="item-info__name">Printed Leggings</h4>
-              <p class="item-info__price">$35.00</p>
-            </div>
-          </div>
-
-          <div class="item">
-            <div class="item__image">
-              <img src="img/staff.jpg" alt="">
-              <div class="item--new">
-                <p>New Arrival</p>
-              </div>
-              <a class="item--hover">
-                <p>Quick View</p>
-              </a>
-            </div>
-            <div class="item-info">
-              <h4 class="item-info__name">Printed Leggings</h4>
-              <p class="item-info__price">$35.00</p>
-            </div>
-          </div>
-
+        <div id="shop-container">
         </div>
+
+        <script id="container" type="text/x-handlebars-template">
+          {{#each products}}
+          {{#if_eq tag 'Best Seller'}}
+          <div class="item">
+            <div class="item__image">
+              <img src="{{src}}" alt="{{name}}">
+              {{#if tag}}
+              <div class="item--new">
+                <p>{{tag}}</p>
+              </div>
+              {{/if}}
+              <a class="item--hover">
+                <p>Quick View</p>
+              </a>
+            </div>
+            <div class="item-info">
+              <h4 class="item-info__name">{{name}}</h4>
+              <p class="item-info__price">{{price}}</p>
+            </div>
+          </div>    
+          {{/if_eq}}
+          {{/each}}
+        </script>
+
       </div>
 
       <div class="q-view visually-hidden">
@@ -480,7 +361,8 @@
     </svg>
   </div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="js/index.js"></script>
   <script src="js/slick.min.js"></script>
   <script src="js/app.js"></script>
   <script src="js/slick-slider.js"></script>

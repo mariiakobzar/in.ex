@@ -1128,7 +1128,7 @@ ul li {
   display: flex;
 }
 
-.shop-container {
+#shop-container {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1352,5 +1352,20 @@ button[data-color=purple] {
 
 .cb-container input:checked ~ .checkmark:after {
   display: block;
+}
+
+@media screen and (max-width: 480px) {
+  .hero {
+    display: none;
+  }
+  .filter {
+    display: none;
+  }
+  .shop {
+    padding-top: 120px;
+  }
+  .item {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=shop.css.map */

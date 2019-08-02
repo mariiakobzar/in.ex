@@ -46,12 +46,12 @@
     padding: 0 50px; 
     display: flex;
   }
+}
 
-  &-container {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-  }
+#shop-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .filter {
@@ -252,4 +252,24 @@ button {
           display: block;
     }
   }
+}
+
+@media screen and (max-width : 480px) {
+
+.hero{
+  display: none;
+}
+
+.filter{
+  display: none;
+}
+
+.shop{
+  padding-top: 120px;
+}
+
+.item{
+  width: 100%;
+}
+
 }

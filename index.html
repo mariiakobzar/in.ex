@@ -8,6 +8,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>IN.EX</title>
   <script defer src="js/all.min.js"></script>
+  <script src="js/handlebars-v4.1.2.js"></script>
   <link rel="stylesheet" href="style/normalize.css">
   <link rel="stylesheet" href="style/fonts.css">
   <link rel="stylesheet" href="style/home.css">
@@ -182,72 +183,30 @@
 
     <section class="arrivals">
       <h3 class="arrivals__title">New arrivals</h3>
-      <div class="container">
-
-        <div class="item">
-          <div class="item__image">
-            <img src="img/staff.jpg" alt="">
-            <div class="item--new">
-              <p>New Arrival</p>
-            </div>
-            <a class="item--hover">
-              <p>Quick View</p>
-            </a>
-          </div>
-          <div class="item-info">
-            <h4 class="item-info__name">Printed Leggings</h4>
-            <p class="item-info__price">$35.00</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="item__image">
-            <img src="img/content/jacket3.jpg" alt="">
-            <div class="item--new">
-              <p>New Arrival</p>
-            </div>
-            <a class="item--hover">
-              <p>Quick View</p>
-            </a>
-          </div>
-          <div class="item-info">
-            <h4 class="item-info__name">Printed Leggings</h4>
-            <p class="item-info__price">$35.00</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="item__image">
-            <img src="img/content/shorts2.jpg" alt="">
-            <div class="item--new">
-              <p>New Arrival</p>
-            </div>
-            <a class="item--hover">
-              <p>Quick View</p>
-            </a>
-          </div>
-          <div class="item-info">
-            <h4 class="item-info__name">Printed Leggings</h4>
-            <p class="item-info__price">$37.00</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="item__image">
-            <img src="img/content/top2.jpg" alt="">
-            <div class="item--new">
-              <p>New Arrival</p>
-            </div>
-            <a class="item--hover">
-              <p>Quick View</p>
-            </a>
-          </div>
-          <div class="item-info">
-            <h4 class="item-info__name">Printed Leggings</h4>
-            <p class="item-info__price">$35.00</p>
-          </div>
-        </div>
+      <div class="container" id="arrivals">
       </div>
+
+      <script id="container" type="text/x-handlebars-template">
+        {{#eachForIndex products}}
+        <div class="item">
+          <div class="item__image">
+            <img src="{{src}}" alt="{{name}}">
+            {{#if tag}}
+            <div class="item--new">
+              <p>{{tag}}</p>
+            </div>
+            {{/if}}
+            <a class="item--hover">
+              <p>Quick View</p>
+            </a>
+          </div>
+          <div class="item-info">
+            <h4 class="item-info__name">{{name}}</h4>
+            <p class="item-info__price">{{price}}</p>
+          </div>
+        </div>    
+        {{/eachForIndex}}
+      </script>
 
       <a href="#" class="btn">Shop All</a>
 
@@ -392,7 +351,8 @@
     </svg>
   </div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="js/index.js"></script>
   <script src="js/app.js"></script>
   <script src="js/animation.js"></script>
 

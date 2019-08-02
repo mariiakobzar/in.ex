@@ -44,7 +44,16 @@
     });
 
     //OPEN/CLOSE QUICK-VIEW
-    $(".item--hover").click(function (e) {
+    $("#shop-container").on("click", "a.item--hover", openQuickView);
+    $("#arrivals").on("click", "a.item--hover", openQuickView);
+
+    $(".q-view").on("click", function (e) {
+      if (e.target == $("#close-btn")[0] || e.target == $(".q-view")[0]) {
+        $(".q-view").addClass("visually-hidden");
+      }
+    });
+
+    function openQuickView(e){
       $(".q-view").removeClass("visually-hidden");
 
       var srcImg = $(this).siblings("img").attr("src");
@@ -55,23 +64,17 @@
 
       var price = $(this).parent().parent().find(".item-info__price").text();
       $(".q-view-card-info__price").text(price);
-     });
-
-    $(".q-view").click(function (e) {
-      if (e.target == $("#close-btn")[0] || e.target == $(".q-view")[0]) {
-        $(".q-view").addClass("visually-hidden");
-      }
-    });
+    }
 
     //OPEN ITEM
-    $(".item").click(function (e) {
-      let td = e.target.closest(".item--hover");
-      if (td) {
-        $(".q-view").removeClass("visually-hidden");
-      } else {
-        window.open("./product.html");
-      }
-    });
+    // $(".item").click(function (e) {
+    //   let td = e.target.closest(".item--hover");
+    //   if (td) {
+    //     $(".q-view").removeClass("visually-hidden");
+    //   } else {
+    //     window.open("./product.html");
+    //   }
+    // });
 
     //SLIDER
     var twobombSlider = (function () {
